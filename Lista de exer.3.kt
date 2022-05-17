@@ -4,12 +4,12 @@ fun main (){
     val idade = readln().toInt()
 
 
-    if (idade <=10 && idade <=14){
-        println("Você está na categoria infantil")
-    }else if ( idade in 15 .. 17){
-        println(" Você está na categoria juvenil")
-    } else{
-        print(" Você está na categoria adulto")
-    }
-
+    when ( idade){
+    
+    in 10 .. 14 -> println ("Infantil")
+    in 15 .. 17 -> println ("Juvenil")
+    in 18 .. 25 -> println ("Adulto")
+   
+    else -> println(" Valor inválido")
+}
 }
